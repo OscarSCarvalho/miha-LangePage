@@ -1,0 +1,15 @@
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+
+# Artefatos ATHOS (não vão para o repositório público)
+CONTEXT.md
+AI_ROLES.md
+SPEC.md
+PROPOSAL.md
+PLAN.md
