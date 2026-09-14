@@ -1,53 +1,63 @@
+/* Sistema "Sequel" — ver DESIGN.md */
 :root {
-  /* Cores */
-  --color-bg:          #0a0a0a;
-  --color-bg-section:  #111111;
-  --color-bg-card:     #1a1a1a;
-  --color-text:        #e8e8e8;
-  --color-text-muted:  #9ca3af;
-  --color-gold:        #c9a84c;
-  --color-gold-light:  #e0c06e;
-  --color-white:       #ffffff;
-  --color-border:      #2a2a2a;
+  /* Cores — estritamente acromático */
+  --color-void-black: #000000;
+  --color-pure-white: #ffffff;
+  --color-charcoal:   #202020;
+  --color-graphite:   #333333;
+  --color-lamp-cream: #f5f5f0;
+  --color-smoke:      #999999;
 
-  /* Tipografia */
-  --font-serif:  'Playfair Display', Georgia, serif;
-  --font-sans:   'Inter', system-ui, sans-serif;
+  /* Tipografia — famílias (substitutos Google Fonts) */
+  --font-visueltpro: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-bradford:   'Newsreader', 'Tiempos Headline', Georgia, serif;
 
-  --text-xs:   0.75rem;
-  --text-sm:   0.875rem;
-  --text-base: 1rem;
-  --text-lg:   1.125rem;
-  --text-xl:   1.25rem;
-  --text-2xl:  1.5rem;
-  --text-3xl:  1.875rem;
-  --text-4xl:  2.25rem;
-  --text-5xl:  3rem;
-  --text-6xl:  3.75rem;
+  /* Tipografia — escala */
+  --text-label-sm: 11px;
+  --text-label:    12px;
+  --text-caption:  13px;
+  --text-body:     16px;
+  --text-body-lg:  20px;
+  --text-card:     21px;
+  --text-subheading: 30px;
+  --text-heading:    54px;
+  --text-heading-lg: 57px;
+  --text-display:    128px;
 
-  /* Espaçamentos */
-  --space-1:  0.25rem;
-  --space-2:  0.5rem;
-  --space-3:  0.75rem;
-  --space-4:  1rem;
-  --space-5:  1.25rem;
-  --space-6:  1.5rem;
-  --space-8:  2rem;
-  --space-10: 2.5rem;
-  --space-12: 3rem;
-  --space-16: 4rem;
-  --space-20: 5rem;
-  --space-24: 6rem;
-  --space-32: 8rem;
+  --font-weight-light:   300;
+  --font-weight-regular: 400;
+  --font-weight-medium:  500;
+
+  /* Espaçamento — base 4px */
+  --spacing-4:  4px;
+  --spacing-8:  8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-28: 28px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-64: 64px;
+  --spacing-80: 80px;
+  --spacing-96: 96px;
 
   /* Layout */
-  --max-width:     1100px;
-  --nav-height:    72px;
-  --border-radius: 8px;
-  --border-radius-lg: 16px;
+  --page-max-width: 1200px;
+  --section-gap:    120px;
+  --element-gap:    16px;
+  --nav-height:     72px;
 
-  /* Transições */
-  --transition-fast:   150ms ease;
-  --transition-base:   300ms ease;
-  --transition-slow:   600ms ease;
+  /* Raios */
+  --radius-cards:   10px;
+  --radius-full:    9999px;
+  --radius-inputs:  0px;
+
+  /* Sombras — apenas funcionais */
+  --shadow-xl: rgba(0, 0, 0, 0.35) 0px 10px 30px 0px, rgba(255, 255, 255, 0.08) 0px 1px 0px 0px inset;
+  --shadow-lg: rgba(0, 0, 0, 0.15) 0px 4px 20px 0px;
+
+  /* Movimento */
+  --ease-film: cubic-bezier(0.625, 0.05, 0, 1);
+  --transition-base: 0.3s var(--ease-film);
 }
