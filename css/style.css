@@ -682,6 +682,154 @@ strong { font-weight: var(--font-weight-medium); color: var(--color-pure-white);
 .hoje-card-link:hover { opacity: 0.6; }
 
 /* ============================================================
+   FAMÍLIA — única seção clara: a luz depois da escuridão
+   ============================================================ */
+.section-familia {
+  background-color: var(--color-lamp-cream);
+  color: var(--color-void-black);
+}
+
+.section-familia .section-label { color: var(--color-graphite); }
+
+.section-familia .section-title {
+  color: var(--color-void-black);
+  max-width: 24ch;
+  margin-bottom: var(--spacing-40);
+}
+
+.section-familia strong { color: var(--color-void-black); }
+
+.familia-lead {
+  font-size: var(--text-body-lg);
+  line-height: 1.5;
+  color: var(--color-graphite);
+  max-width: 680px;
+  margin-bottom: var(--spacing-64);
+}
+
+.familia-gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--spacing-16);
+  margin-bottom: var(--spacing-96);
+}
+
+.familia-photo { grid-column: span 2; }
+.familia-photo--main { grid-column: span 4; }
+
+.familia-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-cards);
+}
+
+/* Linha de cima: foto principal + foto vertical com a mesma altura */
+.familia-photo--main img { aspect-ratio: 4 / 3; }
+.familia-photo--tall { display: flex; flex-direction: column; }
+.familia-photo--tall img {
+  flex: 1;
+  min-height: 0;
+  aspect-ratio: auto;
+  contain: size; /* a altura vem da foto principal, não da imagem */
+  object-position: center 80%;
+}
+
+.familia-photo figcaption {
+  font-size: var(--text-caption);
+  color: var(--color-graphite);
+  margin-top: var(--spacing-12);
+}
+
+.familia-contrast {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-64);
+  margin-bottom: var(--spacing-96);
+}
+
+.familia-col {
+  padding-top: var(--spacing-24);
+  border-top: 1px solid var(--color-void-black);
+}
+
+.familia-col p { color: var(--color-graphite); }
+
+.familia-col .familia-col-label {
+  font-size: var(--text-label-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-void-black);
+  margin-bottom: var(--spacing-16);
+}
+
+.familia-quote {
+  max-width: 900px;
+  margin: 0 auto var(--spacing-96);
+  text-align: center;
+}
+
+.familia-quote p {
+  font-family: var(--font-bradford);
+  font-style: italic;
+  font-weight: var(--font-weight-medium);
+  font-size: clamp(26px, 3.2vw, 40px);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.familia-closing {
+  max-width: 720px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.familia-closing p {
+  color: var(--color-graphite);
+  margin-bottom: var(--spacing-32);
+}
+
+.familia-closing .familia-closing-strong {
+  font-size: clamp(var(--text-card), 2.4vw, var(--text-subheading));
+  font-weight: var(--font-weight-light);
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  color: var(--color-void-black);
+}
+
+.familia-closing .familia-ebenezer {
+  font-size: var(--text-label-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-void-black);
+  margin-bottom: 0;
+}
+
+/* Foto do pet shop dentro da linha do tempo */
+.timeline-photo {
+  margin-top: var(--spacing-24);
+  max-width: 320px;
+}
+
+.timeline-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 10%;
+  border-radius: var(--radius-cards);
+}
+
+.timeline-photo figcaption {
+  font-size: var(--text-caption);
+  color: var(--color-smoke);
+  margin-top: var(--spacing-12);
+}
+
+/* ============================================================
    PARA QUEM
    ============================================================ */
 .audience-grid {
@@ -903,6 +1051,16 @@ footer a:hover { opacity: 0.6; }
 
   .audience-grid,
   .hoje-numbers { grid-template-columns: 1fr; }
+
+  .familia-gallery { grid-template-columns: 1fr 1fr; gap: var(--spacing-12); margin-bottom: var(--spacing-64); }
+  .familia-photo,
+  .familia-photo--tall { grid-column: span 1; }
+  .familia-photo--main { grid-column: 1 / -1; }
+  .familia-photo--tall { display: block; }
+  .familia-photo--tall img { aspect-ratio: 1 / 1; contain: none; }
+  .familia-contrast { grid-template-columns: 1fr; gap: var(--spacing-40); margin-bottom: var(--spacing-64); }
+  .familia-quote { margin-bottom: var(--spacing-64); }
+  .timeline-photo { max-width: none; }
   .audience-card { padding: var(--spacing-32) var(--spacing-24); min-height: 0; }
 
   .section-chapter { display: none; }
