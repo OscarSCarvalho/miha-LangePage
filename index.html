@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Newsreader:ital,opsz,wght@1,6..72,500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=4" />
 </head>
 <body>
 
@@ -352,35 +352,25 @@
           Nessas fotos estão os maiores tesouros da minha vida: minha esposa, <strong>Janaina</strong>, e meus filhos, <strong>Julia</strong> e <strong>Pablo Miguel</strong>. Eles são a minha motivação, a razão pela qual enfrento os desafios e a força que me faz continuar, mesmo quando o caminho parece difícil.
         </p>
 
-        <div class="familia-gallery">
-          <figure class="familia-photo familia-photo--main fade-in">
-            <img src="assets/images/familia-completa.jpg" alt="Oscar, Janaina, Julia e Pablo Miguel em pé, lado a lado, ao ar livre" width="1080" height="970" loading="lazy" />
-            <figcaption>Janaina, Julia, Pablo Miguel e eu</figcaption>
-          </figure>
-          <figure class="familia-photo familia-photo--tall fade-in fade-in-delay-1">
-            <img src="assets/images/oscar-janaina-viagem.jpg" alt="Oscar e Janaina abraçados em frente a um prédio de madeira durante uma viagem" width="1080" height="1148" loading="lazy" />
-            <figcaption>Viajar com a Janaina, um sonho que antes parecia distante</figcaption>
-          </figure>
-          <figure class="familia-photo fade-in">
-            <img src="assets/images/oscar-pablo-sorvete.jpg" alt="Oscar em uma selfie com o filho Pablo Miguel, ainda criança, tomando sorvete" width="1080" height="1070" loading="lazy" />
-            <figcaption>Eu e o Pablo Miguel, ainda pequeno</figcaption>
-          </figure>
-          <figure class="familia-photo fade-in fade-in-delay-1">
-            <img src="assets/images/oscar-janaina-carro.jpg" alt="Oscar e Janaina sorrindo em uma selfie dentro do carro, com uma cachorrinha no colo dela" width="960" height="714" loading="lazy" />
-            <figcaption>Eu e a Janaina, na estrada</figcaption>
-          </figure>
-          <figure class="familia-photo fade-in fade-in-delay-2">
-            <img src="assets/images/familia-selfie.jpg" alt="Selfie de Oscar com Janaina, Julia e Pablo Miguel em uma festa ao ar livre" width="1080" height="968" loading="lazy" />
-            <figcaption>Memórias que meus filhos levarão para a vida toda</figcaption>
-          </figure>
-        </div>
+        <figure class="familia-hero fade-in">
+          <img src="assets/images/familia-completa.jpg" alt="Oscar, Janaina, Julia e Pablo Miguel em pé, lado a lado, ao ar livre" width="1080" height="970" loading="lazy" />
+          <figcaption>Janaina, Julia, Pablo Miguel e eu</figcaption>
+        </figure>
 
         <div class="familia-contrast">
           <div class="familia-col fade-in">
+            <figure class="familia-col-photo familia-col-photo--antes">
+              <img src="assets/images/oscar-pablo-sorvete.jpg" alt="Oscar em uma selfie com o filho Pablo Miguel, ainda criança, tomando sorvete" width="1080" height="1070" loading="lazy" />
+              <figcaption>Eu e o Pablo Miguel, ainda pequeno</figcaption>
+            </figure>
             <p class="familia-col-label">Antes</p>
             <p>Houve um tempo em que não tínhamos nossa casa própria, não tínhamos um bom carro para nos locomover, e viajar ou passear em família era algo que nem sempre estava ao nosso alcance. Eu tinha sonhos, mas nem sempre as condições necessárias para realizá-los.</p>
           </div>
           <div class="familia-col fade-in fade-in-delay-1">
+            <figure class="familia-col-photo">
+              <img src="assets/images/oscar-janaina-viagem.jpg" alt="Oscar e Janaina abraçados em frente a um prédio de madeira durante uma viagem" width="640" height="800" loading="lazy" />
+              <figcaption>Viajar com a Janaina, um sonho que antes parecia distante</figcaption>
+            </figure>
             <p class="familia-col-label">Hoje</p>
             <p>Graças à tecnologia, à minha dedicação e, acima de tudo, à graça e à misericórdia de Deus, posso proporcionar à minha família uma vida melhor, realizar sonhos que antes pareciam impossíveis, viajar, passear e criar memórias que meus filhos levarão para a vida toda.</p>
           </div>
@@ -518,7 +508,7 @@
     <span class="float-label">Contratar</span>
   </button>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=4"></script>
   <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

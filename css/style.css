@@ -1,5 +1,5 @@
-@import 'reset.css';
-@import 'tokens.css';
+@import 'reset.css?v=4';
+@import 'tokens.css?v=4';
 
 /* ============================================================
    BASE
@@ -707,40 +707,37 @@ strong { font-weight: var(--font-weight-medium); color: var(--color-pure-white);
   margin-bottom: var(--spacing-64);
 }
 
-.familia-gallery {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: var(--spacing-16);
-  margin-bottom: var(--spacing-96);
-}
+/* Foto principal: a família inteira, como âncora da seção */
+.familia-hero { margin-bottom: var(--spacing-96); }
 
-.familia-photo { grid-column: span 2; }
-.familia-photo--main { grid-column: span 4; }
-
-.familia-photo img {
+.familia-hero img {
   width: 100%;
   height: auto;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
+  object-position: center 20%;
   border-radius: var(--radius-cards);
 }
 
-/* Linha de cima: foto principal + foto vertical com a mesma altura */
-.familia-photo--main img { aspect-ratio: 4 / 3; }
-.familia-photo--tall { display: flex; flex-direction: column; }
-.familia-photo--tall img {
-  flex: 1;
-  min-height: 0;
-  aspect-ratio: auto;
-  contain: size; /* a altura vem da foto principal, não da imagem */
-  object-position: center 80%;
-}
-
-.familia-photo figcaption {
+.familia-hero figcaption,
+.familia-col-photo figcaption {
   font-size: var(--text-caption);
   color: var(--color-graphite);
   margin-top: var(--spacing-12);
 }
+
+/* Uma foto em cada coluna: a prova visual do antes e do hoje */
+.familia-col-photo { margin-bottom: var(--spacing-32); }
+
+.familia-col-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-cards);
+}
+
+.familia-col-photo--antes img { object-position: 35% center; }
 
 .familia-contrast {
   display: grid;
@@ -749,14 +746,12 @@ strong { font-weight: var(--font-weight-medium); color: var(--color-pure-white);
   margin-bottom: var(--spacing-96);
 }
 
-.familia-col {
-  padding-top: var(--spacing-24);
-  border-top: 1px solid var(--color-void-black);
-}
 
 .familia-col p { color: var(--color-graphite); }
 
 .familia-col .familia-col-label {
+  padding-top: var(--spacing-24);
+  border-top: 1px solid var(--color-void-black);
   font-size: var(--text-label-sm);
   font-weight: var(--font-weight-medium);
   letter-spacing: 0.05em;
@@ -1052,12 +1047,8 @@ footer a:hover { opacity: 0.6; }
   .audience-grid,
   .hoje-numbers { grid-template-columns: 1fr; }
 
-  .familia-gallery { grid-template-columns: 1fr 1fr; gap: var(--spacing-12); margin-bottom: var(--spacing-64); }
-  .familia-photo,
-  .familia-photo--tall { grid-column: span 1; }
-  .familia-photo--main { grid-column: 1 / -1; }
-  .familia-photo--tall { display: block; }
-  .familia-photo--tall img { aspect-ratio: 1 / 1; contain: none; }
+  .familia-hero { margin-bottom: var(--spacing-64); }
+  .familia-hero img { aspect-ratio: 4 / 3; }
   .familia-contrast { grid-template-columns: 1fr; gap: var(--spacing-40); margin-bottom: var(--spacing-64); }
   .familia-quote { margin-bottom: var(--spacing-64); }
   .timeline-photo { max-width: none; }
