@@ -1,5 +1,5 @@
-@import 'reset.css?v=4';
-@import 'tokens.css?v=4';
+@import 'reset.css?v=5';
+@import 'tokens.css?v=5';
 
 /* ============================================================
    BASE
@@ -567,6 +567,12 @@ strong { font-weight: var(--font-weight-medium); color: var(--color-pure-white);
 }
 
 .timeline-text { color: var(--color-smoke); }
+.timeline-text + .timeline-text { margin-top: var(--spacing-16); }
+
+.timeline-text--strong {
+  color: var(--color-pure-white);
+  font-weight: var(--font-weight-medium);
+}
 
 .callout-number {
   font-size: var(--text-heading-lg);
