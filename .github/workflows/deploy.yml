@@ -1,0 +1,30 @@
+# Deploy automático para o Cloudflare Pages (projeto: oscar-carvalho)
+# Dispara a cada push na branch master ou manualmente (aba Actions > Run workflow).
+name: Deploy Cloudflare Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+      - uses: actions/checkout@v4
+
+      # Publica apenas os arquivos do site (docs internas e .github ficam de fora)
+      - name: Montar pasta de publicação
+        run: |
+          mkdir dist
+          cp -r index.html css js assets dist/
+
+      - name: Publicar no Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ae946fa45923ca87ad082fc4abb3bb74
+          command: pages deploy dist --project-name=oscar-carvalho --branch=main --commit-hash=${{ github.sha }} --commit-message="${{ github.event.head_commit.message || 'Deploy manual' }}"
