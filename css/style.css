@@ -1207,3 +1207,68 @@ footer a:hover { opacity: 0.6; }
   .fam-card { flex-basis: 78%; }
   .familia-col { padding: var(--spacing-28); }
 }
+
+/* Hoje: 3 cards — o último ocupa a linha inteira */
+.hoje-numbers .hoje-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+/* ============================================================
+   A JORNADA — motion da vida perdida à conquista
+   ============================================================ */
+.jornada {
+  position: relative;
+  height: clamp(440px, 72vh, 680px);
+  padding-block: 0;
+  overflow: hidden;
+  background: var(--color-void-black);
+}
+
+.jornada-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.jornada-overlay {
+  position: relative;
+  z-index: 1;
+  padding-top: var(--spacing-64);
+  pointer-events: none;
+}
+
+.jornada-overlay .section-label { color: var(--jornada-ink, var(--color-smoke)); transition: color 0.8s; }
+
+.jornada-words {
+  position: relative;
+  height: clamp(56px, 8vw, 104px);
+}
+
+.jw {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: clamp(44px, 7vw, 96px);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: -0.05em;
+  line-height: 1;
+  color: var(--jornada-text, var(--color-pure-white));
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(24px);
+  transition: opacity 0.8s var(--ease-film), transform 0.8s var(--ease-film), filter 0.8s var(--ease-film), color 0.8s;
+  white-space: nowrap;
+}
+
+.jw.is-active { opacity: 1; filter: none; transform: none; }
+
+.jornada-caption {
+  margin-top: var(--spacing-16);
+  color: var(--jornada-ink, var(--color-smoke));
+  transition: color 0.8s;
+  max-width: 32ch;
+}
+
+@media (max-width: 768px) {
+  .jornada { height: 480px; }
+  .jornada-overlay { padding-top: var(--spacing-40); }
+}

@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Newsreader:ital,opsz,wght@1,6..72,500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=6" />
+  <link rel="stylesheet" href="css/style.css?v=7" />
 </head>
 <body>
 
@@ -90,6 +90,23 @@
             Role para descobrir
           </a>
         </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         A JORNADA — motion: da vida perdida à conquista
+         ==================================================== -->
+    <section id="jornada" class="jornada" aria-label="Animação: da vida perdida à vida de conquista">
+      <canvas class="jornada-canvas" aria-hidden="true"></canvas>
+      <div class="container jornada-overlay">
+        <p class="section-label">A Jornada</p>
+        <p class="jornada-words" aria-hidden="true">
+          <span class="jw is-active">Vida perdida</span>
+          <span class="jw">Fé</span>
+          <span class="jw">Recomeço</span>
+          <span class="jw">Conquista</span>
+        </p>
+        <p class="jornada-caption">Da escuridão à luz — degrau por degrau.</p>
       </div>
     </section>
 
@@ -327,14 +344,6 @@
               <span class="hoje-card-unit">curso superior</span>
               <p class="hoje-card-label">Análise e Desenvolvimento de Sistemas</p>
             </div>
-            <div class="hoje-card hoje-card--highlight fade-in fade-in-delay-3">
-              <p class="hoje-card-company">Athos Tecnologia</p>
-              <p class="hoje-card-tagline">Software · Hardware · Propósito</p>
-              <a href="https://www.athostecnologia.com.br/" target="_blank" rel="noopener noreferrer" class="hoje-card-link">
-                www.athostecnologia.com.br
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-              </a>
-            </div>
           </div>
 
         </div>
@@ -386,9 +395,9 @@
               <p class="fam-card-sub">Um sonho que antes parecia distante</p>
             </li>
             <li class="fam-card" style="--i:3">
-              <div class="fam-card-media"><img src="assets/images/oscar-janaina-carro.jpg" alt="Oscar e Janaina no carro" loading="lazy" /></div>
-              <p class="fam-card-title">Eu e a Janaina</p>
-              <p class="fam-card-sub">Ela acreditou quando ninguém mais acreditava</p>
+              <div class="fam-card-media"><img src="assets/images/oscar-janaina-carro.jpg" alt="Oscar e a filha Julia no carro" loading="lazy" /></div>
+              <p class="fam-card-title">Eu e minha filha Julia</p>
+              <p class="fam-card-sub">Cada conquista também é dela</p>
             </li>
             <li class="fam-card" style="--i:4">
               <div class="fam-card-media"><img src="assets/images/oscar-pablo-sorvete.jpg" alt="Oscar em uma selfie com o filho Pablo Miguel tomando sorvete" loading="lazy" /></div>
@@ -541,7 +550,7 @@
     <span class="float-label">Contratar</span>
   </button>
 
-  <script src="js/main.js?v=6"></script>
+  <script src="js/main.js?v=7"></script>
   <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
