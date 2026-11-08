@@ -102,3 +102,14 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
+
+// Carrossel da Família — botões de navegação
+const famTrack = document.querySelector('.fam-track');
+document.querySelectorAll('.fam-nav-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (!famTrack) return;
+    const card = famTrack.querySelector('.fam-card');
+    const step = card ? card.getBoundingClientRect().width + 20 : 300;
+    famTrack.scrollBy({ left: step * Number(btn.dataset.dir), behavior: 'smooth' });
+  });
+});

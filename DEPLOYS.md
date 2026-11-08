@@ -15,3 +15,4 @@
 |------|--------|-------------------|--------------|
 | 2026-11-08 | — | `9a8aace1` (upload manual) | Versão em produção antes do controle automatizado — referência inicial (repo em `3cb9136`) |
 | 2026-11-08 | (este commit) | automático (push no master) | Card "Hoje": curso superior 0 → 1 (Análise e Desenvolvimento de Sistemas); remove workflow do GitHub Actions |
+| 2026-11-08 | (este commit) | automático (push no master) | Seção Família: carrossel horizontal estilo Spotify com 5 fotos, animação em cascata, hover com zoom e brilho, botões de navegação; Antes/Hoje em cards de destaque |
